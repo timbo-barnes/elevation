@@ -198,8 +198,16 @@ Band 1 Block=512x512 Type=Float32, ColorInterp=Gray
 </details>
 
 ## QGIS
-
-### Loading the TIFF
+### Connecting to a Public Bucket
+1. In QGIS (version 3.40+), via the 'Browser' window, right click on the 'Cloud' type and Select 'New Connection > AWS S3'
+2. Give the connection a name (i.e. New Zealand Elevation)
+3. Set Bucket or Container to 'nz-elevation'
+4. Object key can be left blank (to view all files) or to a specific sub area (i.e. taranaki)
+5. In the Credentials area, add a 'AWS_NO_SIGN_REQUEST' with a value of 'Yes'
+6. Click Ok.
+7. The catalog will now be added to the browser pane and files can be added to the map.
+   
+### Loading a specific TIFF
 
 1. In QGIS, open the "Data Source Manager" (press `ctrl+L`)
 2. Select "Protocol: HTTP(S)" as the "Source Type"
